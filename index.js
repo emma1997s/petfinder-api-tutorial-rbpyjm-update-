@@ -36,6 +36,13 @@ const imgOne = document.createElement('a');
 //add a class on it
 imgOne.className = "img_options";
 
+//add innerText
+imgOne.textContent = 'Link to images';
+
+//some styls
+imgOne.style = 'textDecoration: none';
+imgOne.style = 'textAlign: center';
+
 //We also create an h3
 const headName = document.createElement('h3');
 
@@ -92,7 +99,7 @@ return fetch('https://api.petfinder.com/v2/animals?type=dog&page=2', {
   // optionOne.value = `${data.animals[0].name}`;
   optionOne.innerText = `${data.animals[0].name}`;
    //IMAGES HAVE SOME PROBLEMS
-  imgOne.href = `${data.animals.url}`;
+  imgOne.href = `${data.animals[0].url}`;
   
   headName.textContent = `Name: ${data.animals[0].name}`;
   paraAge.textContent = `Age: ${data.animals[0].age}`;

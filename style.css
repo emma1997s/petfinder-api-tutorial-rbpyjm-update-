@@ -30,7 +30,7 @@ body {
   outline: none;
 }
 
-.main_content img,h3,p {
+.main_content img,h3,p,a {
   display: block;
   /* flex-direction: column;
   align-items: center;
@@ -56,4 +56,12 @@ body {
 
 #btn:hover {
   color: purple;
+}
+
+.img_options {
+  display: inline-block;
+  margin: 0.2rem auto;
+  text-align: center;
+  text-decoration: none;
+  color: rgb(10,100,255);
 }
