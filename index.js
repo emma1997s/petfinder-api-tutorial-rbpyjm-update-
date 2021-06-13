@@ -31,7 +31,7 @@ const optionTwo = document.querySelector('.second_option');
 const main = document.getElementById('main');
 
 //create an img for optionOne
-const imgOne = document.createElement('img');
+const imgOne = document.createElement('a');
 
 //add a class on it
 imgOne.className = "img_options";
@@ -92,7 +92,7 @@ return fetch('https://api.petfinder.com/v2/animals?type=dog&page=2', {
   // optionOne.value = `${data.animals[0].name}`;
   optionOne.innerText = `${data.animals[0].name}`;
    //IMAGES HAVE SOME PROBLEMS
-  imgOne.src = `${data.animals[0].photos[0].full}`;
+  imgOne.href = `${data.animals.url}`;
   
   headName.textContent = `Name: ${data.animals[0].name}`;
   paraAge.textContent = `Age: ${data.animals[0].age}`;
@@ -100,7 +100,7 @@ return fetch('https://api.petfinder.com/v2/animals?type=dog&page=2', {
   paraEmail.textContent = `Email: ${data.animals[0].contact.email}`;
   paraDescription.textContent = `Description: ${data.animals[0].description}`;
 
-  // console.log(data.animals[0]);
+  console.log(data.animals[0]);
 })
 .catch(err => {
   console.log('Something went wrong', err)
